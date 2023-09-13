@@ -1,0 +1,157 @@
+/* Valores que vamos a utilizar en la página */
+:root {
+    --primario: #9C27B0;              /* Define una variable CSS llamada "--primario" con un valor de color púrpura (#9C27B0). */
+    --primario_oscuro: #89119D;       /* Define una variable CSS llamada "--primario_oscuro" con un valor de color púrpura oscuro (#89119D). */
+    --secundario: #FFCE00;            /* Define una variable CSS llamada "--secundario" con un valor de color amarillo (#FFCE00). */
+    --secundario_oscuro: rgb(233,287,2); /* Define una variable CSS llamada "--secundario_oscuro" con un valor de color verde en formato RGB. */
+    --blanco: #fff;                   /* Define una variable CSS llamada "--blanco" con un valor de color blanco (#fff). */
+    --negro: #000;                    /* Define una variable CSS llamada "--negro" con un valor de color negro (#000). */
+    --fuente_principal: 'VT323', monospace; /* Define una variable CSS llamada "--fuente_principal" con un valor de fuente de tipo monoespaciada. */
+}
+
+/* Globales */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  /* Establece el tamaño de fuente base para el documento en 62.5% (equivalente a 10px en un valor de fuente base de 16px). Esto facilita el cálculo de tamaños de fuente en rem. */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; /* Esta regla hace que todos los elementos y sus pseudo-elementos (before y after) hereden el modelo de caja "box-sizing: border-box". Esto significa que el padding y el borde se incluirán en el ancho y alto del elemento, en lugar de sumarse al tamaño. */
+}
+
+body {
+    background-color: var(--primario); /* Establece el color de fondo del cuerpo de la página utilizando la variable "--primario". */
+    font-size: 1.6rem;
+    line-height: 1.5; /* Establece el interlineado en 1.5 veces el tamaño de fuente base. */
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco); /* Establece el color del texto de los párrafos utilizando la variable "--blanco". */
+}
+
+a {
+    text-decoration: none; /* Elimina la decoración de subrayado de los enlaces. */
+}
+
+img {
+   max-width: 100%; /* Limita el ancho de las imágenes al 100% del contenedor padre para que se ajusten automáticamente al tamaño de la pantalla. */
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto; /* Establece un margen automático izquierdo y derecho para centrar el contenido en el contenedor. */
+}
+
+h1, h2, h3 {
+    text-align: center; /* Centra el texto de los encabezados h1, h2 y h3. */
+    color: var(--secundario); /* Establece el color del texto de los encabezados utilizando la variable "--secundario". */
+    font-family: var(--fuente_principal); /* Utiliza la variable "--fuente_principal" como fuente para los encabezados. */
+}
+
+h1 {
+    font-size: 4rem; /* Establece el tamaño de fuente para h1 en 4rem. */
+}
+
+h2 {
+    font-size: 3.2rem; /* Establece el tamaño de fuente para h2 en 3.2rem. */
+}
+
+h3 {
+    font-size: 2.4rem; /* Establece el tamaño de fuente para h3 en 2.4rem. */
+}
+
+/** Header **/
+.header {
+    display: flex; /* Establece el contenedor del encabezado como un elemento flexbox. */
+    justify-content: center; /* Centra los elementos del encabezado horizontalmente utilizando flexbox. */
+}
+
+.header__logo{
+    margin: 3rem 0; /* Establece un margen superior e inferior de 3rem y un margen izquierdo y derecho automático para centrar el logotipo. */
+}
+
+/** footer **/
+.footer{
+    background-color: var(--primario_oscuro); /* Establece el color de fondo del pie de página utilizando la variable "--primario_oscuro". */
+    padding: 2.5rem 0; /* Establece un relleno superior e inferior de 3rem y un relleno izquierdo y derecho automático para centrar el contenido. */
+    margin-top: 2rem; /* Establece un margen superior de 2rem para separar el pie de página del contenido anterior. */
+}
+
+.footer__texto{
+    text-align: center;/* Centra el texto del pie de página. */
+    font-family: var(--fuente_principal); /* Utiliza la variable "--fuente_principal" como fuente para el texto del pie de página. */
+    font-size: 2.2rem;/* Establece el tamaño de fuente para el texto del pie de página en 2.2rem. */
+}
+
+/** Navegación **/
+
+.navegacion{
+    background-color: var(--primario_oscuro); /* Establece el color de fondo de la navegación utilizando la variable "--primario_oscuro". */
+    padding: 1rem 0; /* Establece un relleno superior e inferior de 1rem y un relleno izquierdo y derecho automático para centrar el contenido. */
+    display: flex;/* Establece la navegación como un elemento flexbox. */
+    justify-content: center; /* Centra los elementos de la navegación horizontalmente utilizando flexbox. */
+    gap: 2rem; /* Establece un espacio entre los elementos de la navegación de 2rem. */
+}
+
+.navegacion__enlace {
+    font-family: var(--fuente_principal); /* Utiliza la variable "--fuente_principal" como fuente para los enlaces de navegación. */
+    color: var(--blanco); /* Establece el color del texto de los enlaces utilizando la variable "--blanco". */
+    font-size: 3rem; /* Aumenta el tamaño de la fuente a 3rem para que se vea más grande. */
+}
+
+.navegacion__enlace.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--secundario); /* Establece el color del texto de los enlaces cuando el cursor pasa sobre ellos utilizando la variable "--secundario". */
+}
+
+/** Grid **/
+
+.grid{
+    display: grid; /* Establece el contenedor de la cuadrícula como un elemento de cuadrícula. */
+    grid-template-columns: repeat(2, 1fr); /* Crea una cuadrícula con dos columnas de ancho igual. */
+    gap: 2rem; /* Establece un espacio entre los elementos de la cuadrícula de 2rem. */
+
+
+
+}
+
+@media (min-width:768px ) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr); /* Crea una cuadrícula con tres columnas de ancho igual. */
+    }
+}
+
+/*Productos*/
+
+.producto{
+    background-color: var(--primario_oscuro); /* Establece el color de fondo del producto utilizando la variable "--blanco". */}
+
+.producto__imagen{
+  width: 100%; /* Establece el ancho de la imagen del producto al 100% del contenedor padre para que se ajuste automáticamente al tamaño de la pantalla. */
+}
+
+.producto__informacion{
+
+
+}
+
+.producto__nombre{
+
+    font-size: 4rem; /* Establece el tamaño de fuente para el nombre del producto en 4rem. */
+
+}
+
+.producto__precio{
+
+    font-size: 2.8rem; /* Establece el tamaño de fuente para el precio del producto en 2.8rem. */
+    color: var(--secundario); /* Establece el color del texto del precio utilizando la variable "--secundario". */
+}
+
+.producto__nombre,.producto__precio{
+    font-family: var(--fuente_principal); /* Utiliza la variable "--fuente_principal" como fuente para el nombre y el precio del producto. */
+    margin: 1rem 0; /* Establece un margen superior e inferior de 10px y un margen izquierdo y derecho automático para centrar el contenido. */
+    text-align: center; /* Centra el texto del nombre y el precio del producto. */
+    line-height: 1.2;
+}
