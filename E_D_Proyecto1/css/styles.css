@@ -112,6 +112,7 @@ h3 {
     display: grid; /* Establece el contenedor de la cuadrícula como un elemento de cuadrícula. */
     grid-template-columns: repeat(2, 1fr); /* Crea una cuadrícula con dos columnas de ancho igual. */
     gap: 2rem; /* Establece un espacio entre los elementos de la cuadrícula de 2rem. */
+    background-color: var(--primario_oscuro);
 
 
 
@@ -120,16 +121,20 @@ h3 {
 @media (min-width:768px ) {
     .grid{
         grid-template-columns: repeat(3, 1fr); /* Crea una cuadrícula con tres columnas de ancho igual. */
+        
     }
 }
 
 /*Productos*/
 
 .producto{
-    background-color: var(--primario_oscuro); /* Establece el color de fondo del producto utilizando la variable "--blanco". */}
+    background-color: var(--primario_oscuro); /* Establece el color de fondo del producto utilizando la variable "--blanco". */
+    margin-bottom: 6rem;
+}
 
 .producto__imagen{
   width: 100%; /* Establece el ancho de la imagen del producto al 100% del contenedor padre para que se ajuste automáticamente al tamaño de la pantalla. */
+  height: 80%; /* Establece la altura de la imagen del producto en automático para que se ajuste automáticamente al tamaño de la pantalla. */
 }
 
 .producto__informacion{
@@ -139,19 +144,19 @@ h3 {
 
 .producto__nombre{
 
-    font-size: 4rem; /* Establece el tamaño de fuente para el nombre del producto en 4rem. */
+    font-size: 2rem; /* Establece el tamaño de fuente para el nombre del producto en 4rem. */
 
 }
 
 .producto__precio{
 
-    font-size: 2.8rem; /* Establece el tamaño de fuente para el precio del producto en 2.8rem. */
+    font-size: 2rem; /* Establece el tamaño de fuente para el precio del producto en 2.8rem. */
     color: var(--secundario); /* Establece el color del texto del precio utilizando la variable "--secundario". */
 }
 
 .producto__nombre,.producto__precio{
     font-family: var(--fuente_principal); /* Utiliza la variable "--fuente_principal" como fuente para el nombre y el precio del producto. */
-    margin: 1rem 0; /* Establece un margen superior e inferior de 10px y un margen izquierdo y derecho automático para centrar el contenido. */
+    margin: auto; /* Establece un margen superior e inferior de 10px y un margen izquierdo y derecho automático para centrar el contenido. */
     text-align: center; /* Centra el texto del nombre y el precio del producto. */
-    line-height: 1.2;
+    
 }
