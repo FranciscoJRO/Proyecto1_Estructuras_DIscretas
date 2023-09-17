@@ -39,7 +39,49 @@ a {
 img {
    max-width: 100%; /* Limita el ancho de las imágenes al 100% del contenedor padre para que se ajusten automáticamente al tamaño de la pantalla. */
 }
+.center-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.highlight {
+    background-color: yellowgreen;
+}
+/* styles.css */
+
+/* styles.css */
+
+/* Cambia el color del botón a lila y ajusta los bordes */
+#search-button {
+    background-color: #8B008B; /* Código de color para lila */
+    color: white; /* Color del texto en el botón */
+    font-family: var(--fuente_principal); /* Cambia la fuente del botón */
+    border-radius: 10px; /* Redondea los bordes del botón */
+    border: 2px solid white; /* Establece el borde blanco de 2px */
+    padding: 8px 16px; /* Ajusta el relleno del botón (opcional) */
+    font-size: 2.2rem;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 30px; 
+}
+#search-button:hover {
+    background-color: var(--boton); /* Cambia el color de fondo en el hover */
+}
+/* Cambia el color de fondo de la barra de búsqueda a lila y ajusta los bordes */
+#search-input {
+    text-align: center;
+    font-size: 2.2rem;
+    font-family: var(--fuente_principal); 
+    background-color: #8B008B; /* Código de color para lila */
+    color: white; /* Color del texto en la barra de búsqueda */
+    /* Cambia la fuente de la barra de búsqueda */
+    border-radius: 10px; /* Redondea los bordes de la barra de búsqueda */
+    border: 2px solid white; /* Establece el borde blanco de 2px */
+    padding: 8px; /* Ajusta el relleno de la barra de búsqueda (opcional) */
+    margin-left: 10px;
+    margin-bottom: 30px; 
+}
 .contenedor {
     max-width: 120rem;
     margin: 0 auto; /* Establece un margen automático izquierdo y derecho para centrar el contenido en el contenedor. */
@@ -174,6 +216,7 @@ h3 {
     gap: 2rem;
 }
 
+
 .pdf a {
     text-decoration: none;
     color: white;
@@ -190,6 +233,14 @@ h3 {
 
 .pdf__texto{
 
+    font-size: 5rem; /* Establece el tamaño de fuente para el nombre del producto en 4rem. */
+    color: var(--blanco); /* Establece el color del texto del precio utilizando la variable "--secundario". */
+    font-family: var(--fuente_principal); /* Utiliza la variable "--fuente_principal" como fuente para el nombre y el precio del producto. */
+    margin: auto; /* Establece un margen superior e inferior de 10px y un margen izquierdo y derecho automático para centrar el contenido. */
+    text-align: center; /* Centra el texto del nombre y el precio del producto. */
+}
+
+.inte{
     font-size: 5rem; /* Establece el tamaño de fuente para el nombre del producto en 4rem. */
     color: var(--blanco); /* Establece el color del texto del precio utilizando la variable "--secundario". */
     font-family: var(--fuente_principal); /* Utiliza la variable "--fuente_principal" como fuente para el nombre y el precio del producto. */
