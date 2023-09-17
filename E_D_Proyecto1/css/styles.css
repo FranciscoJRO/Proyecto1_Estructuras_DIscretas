@@ -6,6 +6,7 @@
     --secundario_oscuro: rgb(233,287,2); /* Define una variable CSS llamada "--secundario_oscuro" con un valor de color verde en formato RGB. */
     --blanco: #fff;                   /* Define una variable CSS llamada "--blanco" con un valor de color blanco (#fff). */
     --negro: #000;                    /* Define una variable CSS llamada "--negro" con un valor de color negro (#000). */
+    --boton: #A3F3CF; /* Define una variable css llamada */
     --fuente_principal: 'VT323', monospace; /* Define una variable CSS llamada "--fuente_principal" con un valor de fuente de tipo monoespaciada. */
 }
 
@@ -159,4 +160,39 @@ h3 {
     margin: auto; /* Establece un margen superior e inferior de 10px y un margen izquierdo y derecho automático para centrar el contenido. */
     text-align: center; /* Centra el texto del nombre y el precio del producto. */
     
+}
+
+
+
+.pdf {
+    background-color: var(--primario_oscuro);
+    margin-bottom: 6rem;
+    margin-top: 6rem;
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.pdf a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    border: 2px solid var(--secundario); /* Agregar un contorno de 2px de grosor con el color definido en "--color-contorno". */
+}
+
+.pdf a:hover {
+    background-color: var(--boton);
+    color: var(--negro);
+}
+
+.pdf__texto{
+
+    font-size: 5rem; /* Establece el tamaño de fuente para el nombre del producto en 4rem. */
+    color: var(--blanco); /* Establece el color del texto del precio utilizando la variable "--secundario". */
+    font-family: var(--fuente_principal); /* Utiliza la variable "--fuente_principal" como fuente para el nombre y el precio del producto. */
+    margin: auto; /* Establece un margen superior e inferior de 10px y un margen izquierdo y derecho automático para centrar el contenido. */
+    text-align: center; /* Centra el texto del nombre y el precio del producto. */
 }
