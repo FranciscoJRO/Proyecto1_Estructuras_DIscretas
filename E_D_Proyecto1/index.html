@@ -22,9 +22,14 @@
         <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
 
     </nav>
-
-    <main class="contenedor">
+    
+    <main id="content"  class="contenedor">
+        
         <h1>Ubicación</h1>
+        <div class="center-row">
+            <input type="text" id="search-input" placeholder="Buscar...">
+            <button id="search-button">Buscar</button>
+        </div>
 
         <div class="grid"> <!--grid es el contenedor de los productos -->
             <div class="producto">
@@ -146,6 +151,7 @@
                         <p class="producto__nombre">SCHEINERMAN, Edward
                             Matemáticas discretas.</p>
                         <p class="producto__precio">Ubicacion: Biblioteca "Mtro. Enrique Rivero Borrell" clasificacion QA37.2 S3518</p>
+
                     </div>
             </div> <!--fin de la clase producto-->
             
@@ -155,12 +161,13 @@
             <a class="pdf__texto" href="Encuentra_tu_libro.pdf" download="Encuentra_tu_libro.pdf">Descargar PDF</a>
         </div>
 
-
+    
     </main>
+    
 
     <footer class="footer">
         <p class="footer__texto">Fuentes de consulta Todos los derechos reservados 2023 &copy;</p>
     </footer>
-
+    <script src="busqueda.js"></script>
 </body>
 </html> 
