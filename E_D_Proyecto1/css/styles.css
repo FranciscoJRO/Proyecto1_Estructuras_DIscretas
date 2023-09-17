@@ -58,7 +58,7 @@ img {
     color: white; /* Color del texto en el botón */
     font-family: var(--fuente_principal); /* Cambia la fuente del botón */
     border-radius: 10px; /* Redondea los bordes del botón */
-    border: 2px solid white; /* Establece el borde blanco de 2px */
+    border: 2px solid var(--secundario); /* Establece el borde blanco de 2px */
     padding: 8px 16px; /* Ajusta el relleno del botón (opcional) */
     font-size: 2.2rem;
     text-align: center;
@@ -67,6 +67,8 @@ img {
 }
 #search-button:hover {
     background-color: var(--boton); /* Cambia el color de fondo en el hover */
+    color: var(--negro);
+
 }
 /* Cambia el color de fondo de la barra de búsqueda a lila y ajusta los bordes */
 #search-input {
